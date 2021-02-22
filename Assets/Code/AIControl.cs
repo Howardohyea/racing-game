@@ -14,6 +14,7 @@ public class AIControl : MonoBehaviour
     GameObject target;
     void Start()
     {
+        //theoretically it is possible to list all the f***ing waypoints but this is easier, much easier
         Transform[] allChildren = allWaypoints.GetComponentsInChildren<Transform>();
         waypoints = new List<GameObject>();
         foreach (Transform child in allChildren)
@@ -29,7 +30,7 @@ public class AIControl : MonoBehaviour
     {
         Vector3 targetLocation = target.transform.position;
         Vector3 direction = targetLocation - transform.position;
-        //the 10 controls the speed, larger = slower
+        //the speed control is publec, edit it in Unity itself
         transform.Translate(direction.normalized / Speedcontroller);
         if (direction.magnitude < 1f)
         {
