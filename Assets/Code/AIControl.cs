@@ -14,7 +14,7 @@ public class AIControl : MonoBehaviour
     GameObject target;
     void Start()
     {
-        //theoretically it is possible to list all the f***ing waypoints but this is easier, much easier
+        //theoretically it is possible to list all the fing waypoints but this is easier, much easier
         Transform[] allChildren = allWaypoints.GetComponentsInChildren<Transform>();
         waypoints = new List<GameObject>();
         foreach (Transform child in allChildren)
